@@ -1,0 +1,23 @@
+<?php namespace ProcessWire;
+
+?>
+<img class="w-full h-auto" src="/site/templates/assets/images/hacker4.png" alt="">
+<div class="max-w-7xl bg-white mx-auto ">
+<section class="prose mx-auto">
+<h1>{$page->title}</h1>
+<?php
+foreach ($page->blocks as $block) {
+    echo $rockfrontend->render("fields/blocks/" . $block->type);
+};
+?>
+<hr>
+
+
+{foreach $page->blocks as $block}
+{$rockfrontend->render("fields/blocks/" . $block->type)}
+{/foreach}
+
+
+</section>
+
+</div>
